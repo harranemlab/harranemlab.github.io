@@ -125,9 +125,8 @@ a{color:inherit} img{max-width:100%} button{font:inherit}
 /* footer */
 .footer{background:#06182f;color:#dce7f4;padding:40px 0 22px}.footer-main{display:flex;justify-content:space-between;gap:30px}.footer-brand{display:flex;align-items:center;gap:12px}.footer-brand img{width:54px;height:54px;object-fit:contain;background:#fff;border-radius:9px}.footer-brand strong{display:block;color:#fff}.footer-brand small{display:block;color:#8199b5}.footer-links{display:flex;flex-wrap:wrap;gap:16px}.footer-links a{font-size:.72rem;color:#b5c8dc;text-decoration:none}.footer-bottom{margin-top:25px;padding-top:15px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;color:#718ba9;font-size:.66rem}
 
-/* modal/consent */
+/* modal */
 .modal{position:fixed;z-index:300;inset:0;background:rgba(3,12,29,.91);display:grid;place-items:center;padding:22px}.modal[hidden]{display:none}.modal-box{position:relative;max-width:min(96vw,1350px);max-height:94vh;overflow:auto;background:#fff;border-radius:18px;padding:8px}.modal-box img{display:block;width:auto;max-height:90vh;margin:auto}.modal-close{position:sticky;top:0;float:right;z-index:2;width:38px;height:38px;border:0;border-radius:50%;background:var(--navy);color:#fff;font-size:1.05rem;cursor:pointer}
-.consent{position:fixed;z-index:250;left:16px;right:16px;bottom:16px;max-width:850px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:20px}.consent[hidden]{display:none}.consent strong{color:var(--navy);font-size:.82rem}.consent p{margin:2px 0 0;color:var(--muted);font-size:.7rem}.consent-actions{display:flex;gap:7px}.consent button{min-height:35px;border:1px solid var(--line);background:#fff;border-radius:8px;padding:0 10px;font-size:.68rem;font-weight:800}.consent .yes{background:var(--navy);color:#fff;border-color:var(--navy)}
 
 /* --- added: visible keyboard focus (was relying on UA default only) --- */
 :where(a,button,[tabindex]):focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
@@ -142,40 +141,22 @@ a{color:inherit} img{max-width:100%} button{font:inherit}
 
 @media(max-width:1000px){.research-grid{grid-template-columns:repeat(2,1fr)}.sponsors{grid-template-columns:repeat(3,1fr)}.lead-grid,.contact-grid{grid-template-columns:1fr}.profile-panel{padding-left:0;padding-top:22px;border-left:0;border-top:1px solid var(--line)}}
 @media(max-width:900px){.nav-toggle{display:block}.nav{display:none;position:absolute;top:74px;left:20px;right:20px;flex-direction:column;align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 16px;box-shadow:var(--shadow)}.nav.open{display:flex}.nav a{padding:9px 1px;border-bottom:1px solid var(--line)}.header-cta{display:none}.focus-grid{grid-template-columns:repeat(2,1fr)}.focus-item:nth-child(2){border-right:0}.focus-item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}.card-grid,.direction-grid{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head .section-lead{margin-top:13px}.process{overflow-x:auto;grid-template-columns:repeat(5,minmax(125px,1fr))}.students:after{background:rgba(255,255,255,.88)}}
-@media(max-width:650px){.container{width:min(calc(100% - 28px),var(--max))}.header-inner{height:68px}.brand img{width:39px;height:39px}.brand strong{font-size:.78rem}.brand small{font-size:.59rem}.nav{top:68px;left:14px;right:14px}.hero{min-height:500px}.hero-inner{padding:50px 0}.hero h1{font-size:clamp(2.65rem,12.5vw,4rem)}.section{padding:66px 0}.focus-grid{grid-template-columns:1fr}.focus-item{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.12)!important}.focus-item:last-child{border-bottom:0!important}.lead-card{align-items:flex-start}.lead-mark{width:80px;height:80px;flex-basis:80px;font-size:1.3rem}.lead-card h2{font-size:1.55rem}.research-grid,.card-grid,.direction-grid,.resource-grid,.sponsors,.sponsors.two{grid-template-columns:1fr}.subhead{display:block}.subhead .text-link{display:inline-block;margin-top:10px}.pub{grid-template-columns:50px 1fr}.pub a{grid-column:2;justify-self:start}.contact-points{grid-template-columns:1fr}.footer-main,.footer-bottom{display:block}.footer-links{margin-top:20px}.footer-bottom span{display:block;margin-top:4px}.consent{display:block}.consent-actions{margin-top:10px}.consent-actions button{width:50%}}
+@media(max-width:650px){.container{width:min(calc(100% - 28px),var(--max))}.header-inner{height:68px}.brand img{width:39px;height:39px}.brand strong{font-size:.78rem}.brand small{font-size:.59rem}.nav{top:68px;left:14px;right:14px}.hero{min-height:500px}.hero-inner{padding:50px 0}.hero h1{font-size:clamp(2.65rem,12.5vw,4rem)}.section{padding:66px 0}.focus-grid{grid-template-columns:1fr}.focus-item{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.12)!important}.focus-item:last-child{border-bottom:0!important}.lead-card{align-items:flex-start}.lead-mark{width:80px;height:80px;flex-basis:80px;font-size:1.3rem}.lead-card h2{font-size:1.55rem}.research-grid,.card-grid,.direction-grid,.resource-grid,.sponsors,.sponsors.two{grid-template-columns:1fr}.subhead{display:block}.subhead .text-link{display:inline-block;margin-top:10px}.pub{grid-template-columns:50px 1fr}.pub a{grid-column:2;justify-self:start}.contact-points{grid-template-columns:1fr}.footer-main,.footer-bottom{display:block}.footer-links{margin-top:20px}.footer-bottom span{display:block;margin-top:4px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 
-<script>
-/* Google Consent Mode v2 — everything denied until the visitor opts in (KVKK / GDPR). */
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('consent', 'default', {
-  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
-  analytics_storage: 'denied', functionality_storage: 'granted',
-  security_storage: 'granted', wait_for_update: 500
-});
-try {
-  if (localStorage.getItem('emlab_consent') === 'granted') {
-    gtag('consent', 'update', { analytics_storage: 'granted' });
-  }
-} catch (e) {}
-gtag('js', new Date());
-gtag('config', 'G-71C63NWNKL', { anonymize_ip: true });
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-71C63NWNKL"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
 <div class="container header-inner">
-  <a class="brand" href="#home" data-track="brand_home"><img src="assets/logo.webp" width="44" height="46" alt=""><span><strong>Applied Electromagnetics Lab</strong><small>Harran University · Electrical &amp; Electronics Engineering</small></span></a>
+  <a class="brand" href="#home"><img src="assets/logo.webp" width="44" height="46" alt=""><span><strong>Applied Electromagnetics Lab</strong><small>Harran University · Electrical &amp; Electronics Engineering</small></span></a>
   <button class="nav-toggle" data-nav-toggle aria-expanded="false"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
   <nav class="nav" data-nav>
-    <a href="#vision" data-track="nav_vision">Vision</a><a href="#research" data-track="nav_research">Research</a><a href="#capabilities" data-track="nav_capabilities">Capabilities</a><a href="#directions" data-track="nav_directions">Directions</a><a href="#outputs" data-track="nav_outputs">Research Outputs</a><a href="#students" data-track="nav_students">Student Research</a><a href="#contact" data-track="nav_contact">Contact</a>
+    <a href="#vision">Vision</a><a href="#research">Research</a><a href="#capabilities">Capabilities</a><a href="#directions">Directions</a><a href="#outputs">Research Outputs</a><a href="#students">Student Research</a><a href="#contact">Contact</a>
   </nav>
-  <a class="header-cta" href="mailto:ekremaltinozen@harran.edu.tr?subject=Applied%20Electromagnetics%20Lab%20collaboration" data-track="header_collaborate" data-event="contact_click">Collaborate</a>
+  <a class="header-cta" href="mailto:ekremaltinozen@harran.edu.tr?subject=Applied%20Electromagnetics%20Lab%20collaboration">Collaborate</a>
 </div>
 </header>
 
@@ -188,7 +169,7 @@ gtag('config', 'G-71C63NWNKL', { anonymize_ip: true });
     <p class="hero-tagline">Research in applied electromagnetics from RF and microwave frequencies to emerging THz systems.</p>
     <p class="hero-lead">The Applied Electromagnetics Lab develops research in high-frequency communication, electromagnetic sensing, computational electromagnetics, and signal intelligence, with an emphasis on physically grounded modelling, measurement, and reproducible analysis.</p>
     <div class="hero-pi"><span>Research led by</span><strong>Dr. Ekrem Altınözen</strong><small>Lab Lead &amp; Principal Investigator</small></div>
-    <div class="actions"><a class="btn light" href="#research" data-track="hero_research" data-event="cta_click">Explore research</a><a class="btn outline" href="#vision" data-track="hero_vision" data-event="cta_click">View lab vision</a></div>
+    <div class="actions"><a class="btn light" href="#research">Explore research</a><a class="btn outline" href="#vision">View lab vision</a></div>
   </div></div>
 </section>
 
@@ -201,19 +182,19 @@ gtag('config', 'G-71C63NWNKL', { anonymize_ip: true });
 
 <section class="section" id="vision"><div class="container">
   <div class="vision-intro"><p class="eyebrow">Lab vision</p><h2 class="section-title">A research framework connecting electromagnetic structures, measurements, and data.</h2><p>The laboratory vision integrates high-frequency communication and sensing with materials, measurement, validation, and machine learning for signals. The objective is to connect electromagnetic mechanisms with measurable, reproducible, and interpretable engineering outcomes.</p></div>
-  <figure class="vision-frame"><img src="assets/vision.webp" width="1254" height="1246" loading="lazy" decoding="async" alt="Lab vision infographic: electromagnetic structures, measurement, and data analysis linked into one research framework"><button class="vision-button" data-open-vision data-track="vision_expand" data-event="media_interaction">Expand infographic ↗</button></figure>
+  <figure class="vision-frame"><img src="assets/vision.webp" width="1254" height="1246" loading="lazy" decoding="async" alt="Lab vision infographic: electromagnetic structures, measurement, and data analysis linked into one research framework"><button class="vision-button" data-open-vision>Expand infographic ↗</button></figure>
 </div></section>
 
 <section class="section soft" id="lead"><div class="container lead-grid">
   <div class="lead-card"><div class="lead-mark">EA</div><div><p class="eyebrow">Research lead</p><h2>Dr. Ekrem Altınözen</h2><p class="lead-role">Lab Lead &amp; Principal Investigator</p><p class="lead-aff">Electrical &amp; Electronics Engineering · Harran University</p></div></div>
   <div class="profile-panel"><p>Academic &amp; professional profiles</p><div class="profile-links">
-    <a class="profile gh" href="https://github.com/harranemlab" target="_blank" rel="noopener" data-track="profile_github" data-event="profile_click"><span class="picon">GH</span>GitHub</a>
-    <a class="profile rg" href="https://www.researchgate.net/profile/Ekrem-Altinozen" target="_blank" rel="noopener" data-track="profile_researchgate" data-event="profile_click"><span class="picon">RG</span>ResearchGate</a>
-    <a class="profile gs" href="https://scholar.google.com/citations?hl=en&user=qvOr3aEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" data-track="profile_google_scholar" data-event="profile_click"><span class="picon">GS</span>Google Scholar</a>
-    <a class="profile scopus" href="https://www.scopus.com/authid/detail.uri?authorId=57218294450" target="_blank" rel="noopener" data-track="profile_scopus" data-event="profile_click"><span class="picon">S</span>Scopus</a>
-    <a class="profile orcid" href="https://orcid.org/0000-0003-3671-6732" target="_blank" rel="noopener" data-track="profile_orcid" data-event="profile_click"><span class="picon">iD</span>ORCID</a>
-    <a class="profile ieee" href="https://ieeexplore.ieee.org/author/37088438148" target="_blank" rel="noopener" data-track="profile_ieee" data-event="profile_click"><span class="picon">IEEE</span>IEEE Xplore</a>
-    <a class="profile hu" href="https://www.harran.edu.tr/personel/ekremaltinozen%40harran.edu.tr" target="_blank" rel="noopener" data-track="profile_harran" data-event="profile_click"><span class="picon">HU</span>Harran</a>
+    <a class="profile gh" href="https://github.com/harranemlab" target="_blank" rel="noopener"><span class="picon">GH</span>GitHub</a>
+    <a class="profile rg" href="https://www.researchgate.net/profile/Ekrem-Altinozen" target="_blank" rel="noopener"><span class="picon">RG</span>ResearchGate</a>
+    <a class="profile gs" href="https://scholar.google.com/citations?hl=en&user=qvOr3aEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener"><span class="picon">GS</span>Google Scholar</a>
+    <a class="profile scopus" href="https://www.scopus.com/authid/detail.uri?authorId=57218294450" target="_blank" rel="noopener"><span class="picon">S</span>Scopus</a>
+    <a class="profile orcid" href="https://orcid.org/0000-0003-3671-6732" target="_blank" rel="noopener"><span class="picon">iD</span>ORCID</a>
+    <a class="profile ieee" href="https://ieeexplore.ieee.org/author/37088438148" target="_blank" rel="noopener"><span class="picon">IEEE</span>IEEE Xplore</a>
+    <a class="profile hu" href="https://www.harran.edu.tr/personel/ekremaltinozen%40harran.edu.tr" target="_blank" rel="noopener"><span class="picon">HU</span>Harran</a>
   </div></div>
 </div></section>
 
@@ -257,17 +238,17 @@ gtag('config', 'G-71C63NWNKL', { anonymize_ip: true });
 <section class="section soft" id="outputs"><div class="container">
   <div class="section-head"><div><p class="eyebrow">Research outputs</p><h2 class="section-title">Publications, software, datasets, and reusable research resources.</h2></div><p class="section-lead">The laboratory website provides the technical research layer, while scholarly outputs remain explicitly attributed to the research lead.</p></div>
   <div class="output-box">
-    <div class="subhead"><div><p class="eyebrow">Selected publications by the Lab Lead</p><h3>Representative peer-reviewed work</h3></div><a class="text-link" href="https://scholar.google.com/citations?hl=en&user=qvOr3aEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" data-track="pub_all" data-event="profile_click">Full publication profile →</a></div>
+    <div class="subhead"><div><p class="eyebrow">Selected publications by the Lab Lead</p><h3>Representative peer-reviewed work</h3></div><a class="text-link" href="https://scholar.google.com/citations?hl=en&user=qvOr3aEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Full publication profile →</a></div>
     <div class="pub-list">
-      <article class="pub"><span class="pub-year">2026</span><div><h4>Graphene-Based Terahertz Metasurface with Molybdenum Disulfide for Refractive Index Sensing Applications</h4><p>Sensing and Imaging · 27(1) · Article 62</p></div><a href="https://doi.org/10.1007/s11220-026-00758-y" target="_blank" rel="noopener" data-track="pub_2026_mos2" data-event="publication_click">DOI ↗</a></article>
-      <article class="pub"><span class="pub-year">2026</span><div><h4>A numerical study of graphene-based nested split-ring terahertz for sensing applications</h4><p>Optical and Quantum Electronics · 58 · Article 181</p></div><a href="https://doi.org/10.1007/s11082-026-08761-z" target="_blank" rel="noopener" data-track="pub_2026_nested" data-event="publication_click">DOI ↗</a></article>
-      <article class="pub"><span class="pub-year">2025</span><div><h4>Numerical Analysis of a Flexible Interconnect and Ground-Defected Split Ring Resonator for High-Frequency 5G Sensing Applications</h4><p>Harran University Journal of Engineering · 10(3) · 172–183</p></div><a href="https://doi.org/10.46578/humder.1741743" target="_blank" rel="noopener" data-track="pub_2025_resonator" data-event="publication_click">DOI ↗</a></article>
-      <article class="pub"><span class="pub-year">2023</span><div><h4>Assessment of the Robustness of Flexible Antennas to Complex Deformations</h4><p>IEEE Transactions on Antennas and Propagation · 71(6) · 4714–4723</p></div><a href="https://doi.org/10.1109/TAP.2023.3262671" target="_blank" rel="noopener" data-track="pub_2023_flexible" data-event="publication_click">DOI ↗</a></article>
-      <article class="pub"><span class="pub-year">2022</span><div><h4>Systematic Generation of Arbitrary Antenna Geometries</h4><p>IEEE Transactions on Antennas and Propagation · 70(8) · 6377–6387</p></div><a href="https://doi.org/10.1109/TAP.2022.3165539" target="_blank" rel="noopener" data-track="pub_2022_geometry" data-event="publication_click">DOI ↗</a></article>
+      <article class="pub"><span class="pub-year">2026</span><div><h4>Graphene-Based Terahertz Metasurface with Molybdenum Disulfide for Refractive Index Sensing Applications</h4><p>Sensing and Imaging · 27(1) · Article 62</p></div><a href="https://doi.org/10.1007/s11220-026-00758-y" target="_blank" rel="noopener">DOI ↗</a></article>
+      <article class="pub"><span class="pub-year">2026</span><div><h4>A numerical study of graphene-based nested split-ring terahertz for sensing applications</h4><p>Optical and Quantum Electronics · 58 · Article 181</p></div><a href="https://doi.org/10.1007/s11082-026-08761-z" target="_blank" rel="noopener">DOI ↗</a></article>
+      <article class="pub"><span class="pub-year">2025</span><div><h4>Numerical Analysis of a Flexible Interconnect and Ground-Defected Split Ring Resonator for High-Frequency 5G Sensing Applications</h4><p>Harran University Journal of Engineering · 10(3) · 172–183</p></div><a href="https://doi.org/10.46578/humder.1741743" target="_blank" rel="noopener">DOI ↗</a></article>
+      <article class="pub"><span class="pub-year">2023</span><div><h4>Assessment of the Robustness of Flexible Antennas to Complex Deformations</h4><p>IEEE Transactions on Antennas and Propagation · 71(6) · 4714–4723</p></div><a href="https://doi.org/10.1109/TAP.2023.3262671" target="_blank" rel="noopener">DOI ↗</a></article>
+      <article class="pub"><span class="pub-year">2022</span><div><h4>Systematic Generation of Arbitrary Antenna Geometries</h4><p>IEEE Transactions on Antennas and Propagation · 70(8) · 6377–6387</p></div><a href="https://doi.org/10.1109/TAP.2022.3165539" target="_blank" rel="noopener">DOI ↗</a></article>
     </div>
   </div>
   <div class="output-box">
-    <div class="subhead"><div><p class="eyebrow">Software &amp; data</p><h3>Reusable software, data, and benchmark resources</h3></div><a class="text-link" href="https://github.com/harranemlab" target="_blank" rel="noopener" data-track="lab_github_data" data-event="profile_click">Lab GitHub →</a></div>
+    <div class="subhead"><div><p class="eyebrow">Software &amp; data</p><h3>Reusable software, data, and benchmark resources</h3></div><a class="text-link" href="https://github.com/harranemlab" target="_blank" rel="noopener">Lab GitHub →</a></div>
     <div class="resource-grid">
       <article class="resource"><span>CODE</span><h4>Measurement &amp; automation tools</h4><p>Scripts and workflows supporting RF measurements, positioning, data organization and reproducible analysis.</p></article>
       <article class="resource"><span>DATA</span><h4>Research datasets</h4><p>Structured electromagnetic measurement and simulation datasets for validation, comparison and data-driven studies.</p></article>
@@ -281,48 +262,38 @@ gtag('config', 'G-71C63NWNKL', { anonymize_ip: true });
   <h2>Student research built around real electromagnetic problems.</h2>
   <p>Undergraduate and graduate students interested in RF, microwave sensing, antennas, SDR, computational electromagnetics, or signal processing may participate through supervised research projects when suitable topics and laboratory capacity are available.</p>
   <div class="student-tags"><span>RF &amp; microwave</span><span>Antennas</span><span>Electromagnetic sensing</span><span>SDR</span><span>Simulation</span><span>Signal processing</span></div>
-  <a class="btn blue" href="mailto:ekremaltinozen@harran.edu.tr?subject=Student%20research%20inquiry%20-%20Applied%20Electromagnetics%20Lab" data-track="student_inquiry" data-event="contact_click">Research inquiry →</a>
+  <a class="btn blue" href="mailto:ekremaltinozen@harran.edu.tr?subject=Student%20research%20inquiry%20-%20Applied%20Electromagnetics%20Lab">Research inquiry →</a>
 </div></div></section>
 
 <section class="section soft" id="support"><div class="container">
   <div class="section-head"><div><p class="eyebrow">Acknowledgements &amp; support</p><h2 class="section-title">Industry support for experimental research and engineering education.</h2></div><p class="section-lead">Laboratory equipment support is acknowledged separately from complimentary samples, materials, software access, and development platforms.</p></div>
   <div class="support-box"><h3>Laboratory equipment support</h3><p class="ack"><strong>We gratefully acknowledge the support of companies that contribute to our lab by providing low-frequency Digital Multimeters, Waveform Generators, InfiniiVision 1000 X-Series Oscilloscope, and a DC power supply with three outputs.</strong></p><div class="sponsors two">
-    <a class="sponsor" href="https://www.keysight.com/" target="_blank" rel="noopener" data-track="sponsor_keysight" data-event="sponsor_click"><img src="assets/sponsors/keysight.webp" width="440" height="155" loading="lazy" decoding="async" alt="Keysight"></a>
-    <a class="sponsor" href="https://www.sparkmeasure.com/" target="_blank" rel="noopener" data-track="sponsor_spark" data-event="sponsor_click"><img src="assets/sponsors/spark.webp" width="440" height="67" loading="lazy" decoding="async" alt="Spark &Ouml;l&ccedil;&uuml;m Teknolojileri"></a>
+    <a class="sponsor" href="https://www.keysight.com/" target="_blank" rel="noopener"><img src="assets/sponsors/keysight.webp" width="440" height="155" loading="lazy" decoding="async" alt="Keysight"></a>
+    <a class="sponsor" href="https://www.sparkmeasure.com/" target="_blank" rel="noopener"><img src="assets/sponsors/spark.webp" width="440" height="67" loading="lazy" decoding="async" alt="Spark &Ouml;l&ccedil;&uuml;m Teknolojileri"></a>
   </div></div>
   <div class="support-box"><h3>Complimentary samples &amp; development boards</h3><p class="ack"><strong>We gratefully acknowledge the support of companies that contribute to our lab by providing complimentary samples and development boards.</strong></p><div class="sponsors">
-    <a class="sponsor" href="https://www.rogerscorp.com/" target="_blank" rel="noopener" data-track="sponsor_rogers" data-event="sponsor_click"><img src="assets/sponsors/rogers.webp" width="440" height="129" loading="lazy" decoding="async" alt="Rogers Corporation"></a>
-    <a class="sponsor" href="https://www.te.com/" target="_blank" rel="noopener" data-track="sponsor_te" data-event="sponsor_click"><img src="assets/sponsors/te.webp" width="440" height="205" loading="lazy" decoding="async" alt="TE Connectivity"></a>
-    <a class="sponsor" href="https://www.terasic.com.tw/" target="_blank" rel="noopener" data-track="sponsor_terasic" data-event="sponsor_click"><img src="assets/sponsors/terasic.webp" width="361" height="170" loading="lazy" decoding="async" alt="Terasic"></a>
-    <a class="sponsor" href="https://www.laird.com/" target="_blank" rel="noopener" data-track="sponsor_laird" data-event="sponsor_click"><img src="assets/sponsors/laird.webp" width="440" height="215" loading="lazy" decoding="async" alt="Laird"></a>
-    <a class="sponsor" href="https://www.renesas.com/" target="_blank" rel="noopener" data-track="sponsor_renesas" data-event="sponsor_click"><img src="assets/sponsors/renesas.webp" width="410" height="96" loading="lazy" decoding="async" alt="Renesas"></a>
-    <a class="sponsor" href="https://www.altera.com/" target="_blank" rel="noopener" data-track="sponsor_altera" data-event="sponsor_click"><span class="brandword altera">altera</span></a>
-    <a class="sponsor" href="https://www.flexcompute.com/tidy3d/" target="_blank" rel="noopener" data-track="sponsor_tidy3d" data-event="sponsor_click"><span class="brandword tidy">Tidy<b>3D</b></span></a>
+    <a class="sponsor" href="https://www.rogerscorp.com/" target="_blank" rel="noopener"><img src="assets/sponsors/rogers.webp" width="440" height="129" loading="lazy" decoding="async" alt="Rogers Corporation"></a>
+    <a class="sponsor" href="https://www.te.com/" target="_blank" rel="noopener"><img src="assets/sponsors/te.webp" width="440" height="205" loading="lazy" decoding="async" alt="TE Connectivity"></a>
+    <a class="sponsor" href="https://www.terasic.com.tw/" target="_blank" rel="noopener"><img src="assets/sponsors/terasic.webp" width="361" height="170" loading="lazy" decoding="async" alt="Terasic"></a>
+    <a class="sponsor" href="https://www.laird.com/" target="_blank" rel="noopener"><img src="assets/sponsors/laird.webp" width="440" height="215" loading="lazy" decoding="async" alt="Laird"></a>
+    <a class="sponsor" href="https://www.renesas.com/" target="_blank" rel="noopener"><img src="assets/sponsors/renesas.webp" width="410" height="96" loading="lazy" decoding="async" alt="Renesas"></a>
+    <a class="sponsor" href="https://www.altera.com/" target="_blank" rel="noopener"><span class="brandword altera">altera</span></a>
+    <a class="sponsor" href="https://www.flexcompute.com/tidy3d/" target="_blank" rel="noopener"><span class="brandword tidy">Tidy<b>3D</b></span></a>
   </div></div>
 </div></section>
 
 <section class="section" id="contact"><div class="container contact-grid">
-  <div class="contact-copy"><p class="eyebrow">Contact &amp; collaboration</p><h2>Research collaboration, student projects, and laboratory support.</h2><p>The laboratory welcomes research collaborations that connect electromagnetic modelling, sensing, RF hardware, materials, measurement, and intelligent signal processing.</p><div class="contact-points"><div>Joint research &amp; publications</div><div>Materials / fabrication collaboration</div><div>Measurement &amp; benchmarking</div><div>Student research projects</div></div><a class="btn blue" href="mailto:ekremaltinozen@harran.edu.tr?subject=Applied%20Electromagnetics%20Lab%20collaboration" data-track="contact_collaborate" data-event="contact_click">Start a conversation →</a></div>
-  <aside class="contact-card"><h3>Dr. Ekrem Altınözen</h3><p><strong>Lab Lead &amp; Principal Investigator</strong><br>Assistant Professor · Electrical &amp; Electronics Engineering · Harran University</p><a class="contact-item" href="mailto:ekremaltinozen@harran.edu.tr" data-track="contact_email" data-event="contact_click"><small>Email</small><span>ekremaltinozen@harran.edu.tr</span></a><a class="contact-item" href="tel:+904143183000" data-track="contact_phone" data-event="contact_click"><small>Office</small><span>+90 414 318 3000 · Ext. 1415</span></a><div class="contact-item"><small>Location</small><span>Faculty of Engineering, F Block, 3rd Floor · Osmanbey Campus · Şanlıurfa, Türkiye</span></div><a class="contact-item" href="https://www.harran.edu.tr/personel/ekremaltinozen%40harran.edu.tr" target="_blank" rel="noopener" data-track="contact_harran" data-event="profile_click"><small>University profile</small><span>Harran University ↗</span></a></aside>
+  <div class="contact-copy"><p class="eyebrow">Contact &amp; collaboration</p><h2>Research collaboration, student projects, and laboratory support.</h2><p>The laboratory welcomes research collaborations that connect electromagnetic modelling, sensing, RF hardware, materials, measurement, and intelligent signal processing.</p><div class="contact-points"><div>Joint research &amp; publications</div><div>Materials / fabrication collaboration</div><div>Measurement &amp; benchmarking</div><div>Student research projects</div></div><a class="btn blue" href="mailto:ekremaltinozen@harran.edu.tr?subject=Applied%20Electromagnetics%20Lab%20collaboration">Start a conversation →</a></div>
+  <aside class="contact-card"><h3>Dr. Ekrem Altınözen</h3><p><strong>Lab Lead &amp; Principal Investigator</strong><br>Assistant Professor · Electrical &amp; Electronics Engineering · Harran University</p><a class="contact-item" href="mailto:ekremaltinozen@harran.edu.tr"><small>Email</small><span>ekremaltinozen@harran.edu.tr</span></a><a class="contact-item" href="tel:+904143183000"><small>Office</small><span>+90 414 318 3000 · Ext. 1415</span></a><div class="contact-item"><small>Location</small><span>Faculty of Engineering, F Block, 3rd Floor · Osmanbey Campus · Şanlıurfa, Türkiye</span></div><a class="contact-item" href="https://www.harran.edu.tr/personel/ekremaltinozen%40harran.edu.tr" target="_blank" rel="noopener"><small>University profile</small><span>Harran University ↗</span></a></aside>
 </div></section>
 
-<section class="section soft" id="privacy"><div class="container" style="max-width:900px"><p class="eyebrow">Privacy &amp; analytics</p><h2 class="section-title">Website analytics.</h2><p class="section-lead">This website uses Google Analytics 4 with Measurement ID G-71C63NWNKL. Analytics may record page views and site-interaction events such as section views, scroll depth, publication links, scholarly-profile links, sponsor links, and contact actions.</p><p style="margin-top:18px"><button type="button" class="btn blue" data-consent-reopen style="cursor:pointer">Change cookie choice</button></p></div></section>
+<section class="section soft" id="privacy"><div class="container" style="max-width:900px"><p class="eyebrow">Privacy</p><h2 class="section-title">No cookies, no tracking.</h2><p class="section-lead">This site sets no cookies, runs no analytics, and does not profile visitors. Nothing you do here is recorded by the lab. The site is hosted on GitHub Pages, so GitHub’s own server logs apply as they would for any page served from that platform.</p></div></section>
 </main>
 
 <footer class="footer"><div class="container footer-main"><div class="footer-brand"><img src="assets/logo.webp" width="54" height="56" loading="lazy" decoding="async" alt=""><div><strong>Applied Electromagnetics Lab</strong><small>Harran University · Şanlıurfa, Türkiye</small></div></div><nav class="footer-links"><a href="#vision">Vision</a><a href="#research">Research</a><a href="#outputs">Research Outputs</a><a href="#directions">Directions</a><a href="#students">Student Research</a><a href="#support">Acknowledgements</a><a href="#privacy">Privacy</a></nav></div><div class="container footer-bottom"><span>© <span data-year></span> Harran University Applied Electromagnetics Lab</span><span>Research led by Dr. Ekrem Altınözen</span></div></footer>
 
 <div class="modal" data-modal hidden role="dialog" aria-modal="true" aria-label="Lab vision infographic"><div class="modal-box" tabindex="-1"><button class="modal-close" data-close-vision aria-label="Close infographic">×</button><img src="assets/vision.webp" width="1254" height="1246" loading="lazy" decoding="async" alt="Lab vision infographic, enlarged view"></div></div>
 
-<div class="consent" data-consent hidden>
-  <div>
-    <strong>Analytics cookies</strong>
-    <p>This site can use Google Analytics to measure which research pages are read. Nothing is stored until you choose Accept.</p>
-  </div>
-  <div class="consent-actions">
-    <button type="button" class="yes" data-consent-accept>Accept</button>
-    <button type="button" data-consent-decline>Decline</button>
-  </div>
-</div>
 
 <script type="application/ld+json">
 {
@@ -389,33 +360,6 @@ gtag('config', 'G-71C63NWNKL', { anonymize_ip: true });
 (() => {
   "use strict";
 
-  const track = (name, params = {}) => {
-    if (typeof window.gtag === "function") window.gtag("event", name, params);
-  };
-  window.EMLAB_TRACK = track;
-
-  /* ---------------------------------------------------------- consent ---- */
-  const consent = document.querySelector("[data-consent]");
-  const store = (v) => { try { localStorage.setItem("emlab_consent", v); } catch (e) {} };
-  const read  = ()  => { try { return localStorage.getItem("emlab_consent"); } catch (e) { return null; } };
-
-  const decide = (granted) => {
-    store(granted ? "granted" : "denied");
-    if (typeof window.gtag === "function") {
-      window.gtag("consent", "update", { analytics_storage: granted ? "granted" : "denied" });
-    }
-    if (consent) consent.hidden = true;
-  };
-
-  if (consent) {
-    if (!read()) consent.hidden = false;
-    consent.querySelector("[data-consent-accept]")?.addEventListener("click", () => decide(true));
-    consent.querySelector("[data-consent-decline]")?.addEventListener("click", () => decide(false));
-  }
-  document.querySelector("[data-consent-reopen]")?.addEventListener("click", () => {
-    if (consent) { consent.hidden = false; consent.querySelector("button")?.focus(); }
-  });
-
   /* -------------------------------------------------------- mobile nav --- */
   const toggle = document.querySelector("[data-nav-toggle]");
   const nav = document.querySelector("[data-nav]");
@@ -431,26 +375,17 @@ gtag('config', 'G-71C63NWNKL', { anonymize_ip: true });
   });
   addEventListener("keydown", (e) => { if (e.key === "Escape") closeNav(); });
 
-  /* ------------------------------------------------------ click events --- */
-  document.querySelectorAll("[data-track]").forEach((el) => {
-    el.addEventListener("click", () => {
-      track(el.dataset.event || "link_click", {
-        label: el.dataset.track,
-        url: el.href || "",
-        section: el.closest("section")?.id || "global"
-      });
-    });
-  });
-
-  /* --------------------- section views + nav highlight (one observer) ---- */
+  /* ------------------------ highlight the section you are reading -------- */
   const navLinks = new Map();
   nav?.querySelectorAll('a[href^="#"]').forEach((a) => navLinks.set(a.getAttribute("href").slice(1), a));
 
   if ("IntersectionObserver" in window) {
-    const seen = new Set();
     const visible = new Set();
-
-    const paint = () => {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.target.id) return;
+        e.isIntersecting ? visible.add(e.target.id) : visible.delete(e.target.id);
+      });
       let best = null;
       document.querySelectorAll("main section[id]").forEach((s) => {
         if (visible.has(s.id) && !best) best = s.id;
@@ -459,42 +394,9 @@ gtag('config', 'G-71C63NWNKL', { anonymize_ip: true });
         if (id === best) a.setAttribute("aria-current", "true");
         else a.removeAttribute("aria-current");
       });
-    };
-
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        const id = e.target.id;
-        if (!id) return;
-        e.isIntersecting ? visible.add(id) : visible.delete(id);
-        if (e.isIntersecting && e.intersectionRatio >= 0.32 && !seen.has(id)) {
-          seen.add(id);
-          track("section_view", { section_name: id });
-        }
-      });
-      paint();
     }, { threshold: [0, 0.32] });
-
     document.querySelectorAll("main section[id]").forEach((s) => io.observe(s));
   }
-
-  /* ------- scroll depth, rAF-throttled so it stops thrashing layout ------ */
-  const depths = [25, 50, 75, 90];
-  const sent = new Set();
-  let ticking = false;
-
-  addEventListener("scroll", () => {
-    if (ticking || sent.size === depths.length) return;
-    ticking = true;
-    requestAnimationFrame(() => {
-      ticking = false;
-      const max = document.documentElement.scrollHeight - innerHeight;
-      if (max <= 0) return;
-      const pct = Math.round((scrollY / max) * 100);
-      depths.forEach((d) => {
-        if (pct >= d && !sent.has(d)) { sent.add(d); track("scroll_depth", { percent: d }); }
-      });
-    });
-  }, { passive: true });
 
   /* ------------------------------ vision modal, as a real dialog -------- */
   const modal = document.querySelector("[data-modal]");
@@ -512,7 +414,6 @@ gtag('config', 'G-71C63NWNKL', { anonymize_ip: true });
     modal.hidden = false;
     document.body.style.overflow = "hidden";
     (focusables()[0] || box)?.focus();
-    track("media_interaction", { media: "lab_vision", action: "open" });
   };
 
   const closeModal = () => {

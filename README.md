@@ -30,6 +30,7 @@ Başka bir yapılandırma gerekmiyor — GitHub Pages statik olarak servis eder.
 | index.html | 8.36 MB | 54 KB (gzip 14 KB) |
 | Kablodan geçen (ilk boyama) | 6.28 MB | **~92 KB** masaüstü / ~51 KB mobil |
 | Tüm site, bütün görseller | 6.28 MB | 807 KB |
+| Dış isteğe bağımlılık | Google Analytics | yok |
 | Tekrar ziyaret | 6.28 MB yeniden | ~14 KB (görseller önbellekte) |
 
 Kritik kazanç vision infografiğinden geldi: 1254×1246 RGBA PNG, tamamen opak bir
@@ -56,12 +57,15 @@ alfa kanalı taşıyordu ve **iki kez** gömülüydü. RGB WebP q82 olarak:
 - `robots.txt` ve `sitemap.xml` eklendi.
 - `<meta charset>` artık dosyanın en başında (GA snippet'inden önce).
 
-**KVKK / GDPR**
-- CSS'te hazır bekleyen `.consent` banner'ının HTML'i yazıldı (`.yes` sınıfı dahil,
-  mevcut stiller aynen kullanıldı).
-- Google Consent Mode v2: `analytics_storage` varsayılan olarak `denied`,
-  seçim `localStorage`'da tutuluyor, onay verilince `update` ediliyor.
-- Privacy bölümüne "Change cookie choice" düğmesi — kararı sonradan değiştirme yolu.
+**Gizlilik**
+- Google Analytics tamamen kaldırıldı: gtag snippet'i, Consent Mode kodu, onay
+  banner'ı, tıklama/scroll olay takibi ve `data-track` öznitelikleri.
+- Site artık hiçbir çerez yazmıyor ve dışarıya tek bir istek bile atmıyor
+  (headless Chromium ile doğrulandı). Böylece açık rıza, çerez politikası ve
+  KVKK m.9 yurt dışı aktarım meselesi tamamen ortadan kalktı.
+- `#privacy` bölümü tek paragrafa indi: çerez yok, takip yok, GitHub Pages'in
+  kendi sunucu logları dışında kayıt yok.
+
 
 **Erişilebilirlik**
 - Modal artık gerçek bir dialog: `role="dialog"`, `aria-modal`, odak tuzağı
