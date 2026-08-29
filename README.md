@@ -63,8 +63,9 @@ alfa kanalı taşıyordu ve **iki kez** gömülüydü. RGB WebP q82 olarak:
 - Site artık hiçbir çerez yazmıyor ve dışarıya tek bir istek bile atmıyor
   (headless Chromium ile doğrulandı). Böylece açık rıza, çerez politikası ve
   KVKK m.9 yurt dışı aktarım meselesi tamamen ortadan kalktı.
-- `#privacy` bölümü tek paragrafa indi: çerez yok, takip yok, GitHub Pages'in
-  kendi sunucu logları dışında kayıt yok.
+- `#privacy` bölümü ve footer'daki Privacy linki tamamen kaldırıldı — beyan
+  edilecek bir veri işleme kalmadığı için gereksizdi.
+- Sponsor karoları `<a>` yerine `<div>`; logolar duruyor, dışarı link vermiyorlar.
 
 
 **Erişilebilirlik**
