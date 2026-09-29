@@ -147,12 +147,25 @@ a{color:inherit} img{max-width:100%} button{font:inherit}
 /* --- added: reserve image space, kill layout shift --- */
 .vision-frame img{aspect-ratio:1254/1246;background:var(--soft)}
 .sponsor img{width:auto;height:auto}
+
+/* Academic biography */
+.bio-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.75fr);gap:34px;align-items:start}
+.bio-copy{font-size:.98rem;color:#33445a}.bio-copy>p{margin:0 0 18px}.bio-copy>p:last-child{margin-bottom:0}
+.bio-intro{font-size:1.08rem;line-height:1.76;color:var(--ink)!important}
+.bio-sidebar{display:grid;gap:12px}.bio-card{border:1px solid var(--line);border-radius:16px;background:#fff;padding:19px 20px}
+.bio-card h3{font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:var(--navy);margin:0 0 11px}
+.bio-card p{font-size:.84rem;color:var(--muted);margin:0 0 9px;line-height:1.55}.bio-card p:last-child{margin-bottom:0}.bio-card strong{color:var(--ink)}
+.bio-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px}.bio-meta article{border:1px solid var(--line);border-radius:16px;background:#fff;padding:20px}
+.bio-meta h3{font-size:1rem;color:var(--navy);margin:0 0 10px}.bio-meta ul{margin:0;padding-left:18px;color:var(--muted);font-size:.84rem}.bio-meta li{margin:6px 0}
+.bio-focus{margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}.bio-focus h3{font-size:1.1rem;color:var(--navy);margin:0 0 13px}.interest-tags{display:flex;flex-wrap:wrap;gap:8px}.interest-tags span{border:1px solid #cddaea;background:#fff;border-radius:999px;padding:7px 10px;font-size:.74rem;font-weight:760;color:#36526f}
+.approach-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:15px}.approach-grid div{border-radius:13px;background:#eef4fa;padding:13px 12px;min-height:94px}.approach-grid strong{display:block;color:var(--navy);font-size:.78rem;margin-bottom:5px}.approach-grid span{display:block;color:var(--muted);font-size:.72rem;line-height:1.45}
+
 /* --- added: modal is a real dialog now --- */
 .modal-box:focus{outline:none}
 
-@media(max-width:1000px){.research-grid{grid-template-columns:repeat(2,1fr)}.sponsors{grid-template-columns:repeat(3,1fr)}.lead-grid,.contact-grid{grid-template-columns:1fr}.profile-panel{padding-left:0;padding-top:22px;border-left:0;border-top:1px solid var(--line)}}
+@media(max-width:1000px){.bio-layout{grid-template-columns:1fr}.approach-grid{grid-template-columns:repeat(3,1fr)}.research-grid{grid-template-columns:repeat(2,1fr)}.sponsors{grid-template-columns:repeat(3,1fr)}.lead-grid,.contact-grid{grid-template-columns:1fr}.profile-panel{padding-left:0;padding-top:22px;border-left:0;border-top:1px solid var(--line)}}
 @media(max-width:900px){.nav-toggle{display:block}.nav{display:none;position:absolute;top:74px;left:20px;right:20px;flex-direction:column;align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 16px;box-shadow:var(--shadow)}.nav.open{display:flex}.nav a{padding:9px 1px;border-bottom:1px solid var(--line)}.header-cta{display:none}.focus-grid{grid-template-columns:repeat(2,1fr)}.focus-item:nth-child(2){border-right:0}.focus-item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}.card-grid,.direction-grid{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head .section-lead{margin-top:13px}.process{overflow-x:auto;grid-template-columns:repeat(5,minmax(125px,1fr))}.students:after{background:rgba(255,255,255,.88)}}
-@media(max-width:650px){.container{width:min(calc(100% - 28px),var(--max))}.header-inner{height:68px}.brand img{width:39px;height:39px}.brand strong{font-size:.78rem}.brand small{font-size:.59rem}.nav{top:68px;left:14px;right:14px}.hero{min-height:500px}.hero-inner{padding:50px 0}.hero h1{font-size:clamp(2.65rem,12.5vw,4rem)}.section{padding:66px 0}.focus-grid{grid-template-columns:1fr}.focus-item{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.12)!important}.focus-item:last-child{border-bottom:0!important}.lead-card{align-items:flex-start}.lead-mark{width:80px;height:80px;flex-basis:80px;font-size:1.3rem}.lead-card h2{font-size:1.55rem}.research-grid,.card-grid,.direction-grid,.resource-grid,.sponsors,.sponsors.two{grid-template-columns:1fr}.subhead{display:block}.subhead .text-link{display:inline-block;margin-top:10px}.pub{grid-template-columns:50px 1fr}.pub a{grid-column:2;justify-self:start}.contact-points{grid-template-columns:1fr}.footer-main,.footer-bottom{display:block}.footer-links{margin-top:20px}.footer-bottom span{display:block;margin-top:4px}}
+@media(max-width:650px){.bio-meta{grid-template-columns:1fr}.approach-grid{grid-template-columns:1fr}.container{width:min(calc(100% - 28px),var(--max))}.header-inner{height:68px}.brand img{width:39px;height:39px}.brand strong{font-size:.78rem}.brand small{font-size:.59rem}.nav{top:68px;left:14px;right:14px}.hero{min-height:500px}.hero-inner{padding:50px 0}.hero h1{font-size:clamp(2.65rem,12.5vw,4rem)}.section{padding:66px 0}.focus-grid{grid-template-columns:1fr}.focus-item{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.12)!important}.focus-item:last-child{border-bottom:0!important}.lead-card{align-items:flex-start}.lead-mark{width:80px;height:80px;flex-basis:80px;font-size:1.3rem}.lead-card h2{font-size:1.55rem}.research-grid,.card-grid,.direction-grid,.resource-grid,.sponsors,.sponsors.two{grid-template-columns:1fr}.subhead{display:block}.subhead .text-link{display:inline-block;margin-top:10px}.pub{grid-template-columns:50px 1fr}.pub a{grid-column:2;justify-self:start}.contact-points{grid-template-columns:1fr}.footer-main,.footer-bottom{display:block}.footer-links{margin-top:20px}.footer-bottom span{display:block;margin-top:4px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 
@@ -165,7 +178,7 @@ a{color:inherit} img{max-width:100%} button{font:inherit}
   <a class="brand" href="#home"><img src="assets/logo.webp" width="44" height="46" alt=""><span><strong>Applied Electromagnetics Lab</strong><small>Harran University · Electrical &amp; Electronics Engineering</small></span></a>
   <button class="nav-toggle" data-nav-toggle aria-expanded="false"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
   <nav class="nav" data-nav>
-    <a href="#vision">Vision</a><a href="#research">Research</a><a href="#capabilities">Capabilities</a><a href="#directions">Directions</a><a href="#outputs">Research Outputs</a><a href="#students">Student Research</a><a href="#contact">Contact</a>
+    <a href="#vision">Vision</a><a href="#biography">Biography</a><a href="#research">Research</a><a href="#capabilities">Capabilities</a><a href="#directions">Directions</a><a href="#outputs">Outputs</a><a href="#students">Students</a><a href="#contact">Contact</a>
   </nav>
   <a class="header-cta" href="mailto:ekremaltinozen@harran.edu.tr?subject=Applied%20Electromagnetics%20Lab%20collaboration">Collaborate</a>
 </div>
@@ -197,7 +210,7 @@ a{color:inherit} img{max-width:100%} button{font:inherit}
 </div></section>
 
 <section class="section soft" id="lead"><div class="container lead-grid">
-  <div class="lead-card"><div class="lead-mark">EA</div><div><p class="eyebrow">Research lead</p><h2>Dr. Ekrem Altınözen</h2><p class="lead-role">Lab Lead &amp; Principal Investigator</p><p class="lead-aff">Electrical &amp; Electronics Engineering · Harran University</p></div></div>
+  <div class="lead-card"><div class="lead-mark">EA</div><div><p class="eyebrow">Research lead</p><h2>Dr. Ekrem Altınözen</h2><p class="lead-role">Assistant Professor · Lab Lead &amp; Principal Investigator</p><p class="lead-aff">Electrical &amp; Electronics Engineering · Harran University</p></div></div>
   <div class="profile-panel"><p>Academic &amp; professional profiles</p><div class="profile-links">
     <a class="profile gh" href="https://github.com/harranemlab" target="_blank" rel="noopener"><span class="picon">GH</span>GitHub</a>
     <a class="profile rg" href="https://www.researchgate.net/profile/Ekrem-Altinozen" target="_blank" rel="noopener"><span class="picon">RG</span>ResearchGate</a>
@@ -207,6 +220,54 @@ a{color:inherit} img{max-width:100%} button{font:inherit}
     <a class="profile ieee" href="https://ieeexplore.ieee.org/author/37088438148" target="_blank" rel="noopener"><span class="picon">IEEE</span>IEEE Xplore</a>
     <a class="profile hu" href="https://www.harran.edu.tr/personel/ekremaltinozen%40harran.edu.tr" target="_blank" rel="noopener"><span class="picon">HU</span>Harran</a>
   </div></div>
+</div></section>
+
+<section class="section" id="biography"><div class="container">
+  <div class="section-head"><div><p class="eyebrow">Academic biography</p><h2 class="section-title">Ekrem Altınözen, PhD</h2></div><p class="section-lead">Assistant Professor of Electrical and Electronics Engineering · Harran University, Şanlıurfa, Türkiye</p></div>
+  <div class="bio-layout">
+    <div>
+      <div class="bio-copy">
+        <p class="bio-intro">Dr. Ekrem Altınözen is an Assistant Professor at Harran University and a member of IEEE. He conducts research through the Applied Electromagnetics Lab at the intersection of computational electromagnetics, RF and microwave engineering, resonant sensing, antenna technology, and intelligent signal processing.</p>
+        <p>His research combines electromagnetic theory, full-wave numerical simulation, experimental measurement, inverse modelling, and data-driven interpretation to develop physically meaningful and practically testable sensing and communication technologies.</p>
+        <p>He received his BSc degree with First-Class Honours in Electrical and Electronic Engineering from Eskişehir Osmangazi University in 2015. He subsequently completed his MSc degree with First-Class Honours and his PhD degree at the University of Nottingham, United Kingdom, in 2018 and 2023, respectively.</p>
+        <p>His doctoral research, <em>Spatial Warping Techniques for the Unstructured Transmission Line Modelling Method</em>, investigated computational approaches for representing complex geometrical deformations in flexible electromagnetic structures. The work contributed to modelling and performance assessment of conformal antennas, wearable antennas, flexible interconnects, and other high-frequency components subjected to bending, twisting, and combined deformations.</p>
+        <p>At Harran University, his current research expands these foundations toward microwave and terahertz resonant sensors, chipless RFID, dielectric material characterization, structural health monitoring, reconfigurable electromagnetic structures, and physics-guided signal intelligence.</p>
+        <p>His teaching covers electromagnetic wave theory, communication engineering, antennas, microwave systems, and numerical engineering methods. He supervises undergraduate and graduate research involving resonant microwave sensors, antennas, chipless RFID, software-defined radio, material characterization, signal processing, and computational electromagnetics, with emphasis on connecting theory to simulation, prototyping, measurement, and reproducible analysis.</p>
+      </div>
+
+      <div class="bio-meta">
+        <article><h3>Education</h3><ul>
+          <li><strong>PhD, Electrical and Electronic Engineering</strong> — University of Nottingham, United Kingdom, 2023</li>
+          <li><strong>MSc, Electrical and Electronic Engineering — First-Class Honours</strong> — University of Nottingham, 2018</li>
+          <li><strong>BSc, Electrical and Electronic Engineering — First-Class Honours</strong> — Eskişehir Osmangazi University, 2015</li>
+        </ul></article>
+        <article><h3>Academic appointments</h3><ul>
+          <li><strong>Assistant Professor</strong> — Department of Electrical and Electronics Engineering, Harran University</li>
+          <li><strong>Vice Chair</strong> — Department of Electrical and Electronics Engineering, Harran University</li>
+        </ul></article>
+      </div>
+    </div>
+
+    <aside class="bio-sidebar" aria-label="Academic memberships and service">
+      <div class="bio-card"><h3>Research profile</h3><p><strong>RF &amp; microwave sensing</strong><br>Antennas · intelligent signal interpretation · computational electromagnetics</p><p>Applied electromagnetic sensing · microwave and THz resonant sensors · microstrip antennas and arrays</p></div>
+      <div class="bio-card"><h3>Professional memberships</h3><p><strong>IEEE</strong> · Member since 2020</p><p><strong>IEEE Antennas and Propagation Society (AP-S)</strong> · Member since 2022</p><p><strong>IEEE Microwave Theory and Technology Society (MTT-S)</strong> · Member since 2023</p></div>
+      <div class="bio-card"><h3>COST Action</h3><p><strong>CA23015 · TETRA</strong><br><em>The mETamaterial foRmalism approach to recognize cAncer</em></p></div>
+      <div class="bio-card"><h3>Academic service</h3><p><strong>Peer review</strong><br><em>npj Flexible Electronics</em></p></div>
+      <div class="bio-card"><h3>Collaboration</h3><p>Academic and industrial collaboration is welcomed in computational electromagnetics, RF and microwave sensing, antenna technologies, chipless RFID, flexible electronics, intelligent RF hardware, and physics-guided signal processing.</p></div>
+    </aside>
+  </div>
+
+  <div class="bio-focus">
+    <h3>Research interests</h3>
+    <div class="interest-tags"><span>Flexible, conformal &amp; wearable antennas</span><span>Physics-guided machine learning</span><span>RF, microwave, mm-wave &amp; THz sensors</span><span>Resonators &amp; metamaterials</span><span>Chipless RFID &amp; structural health monitoring</span><span>Dielectric &amp; material characterization</span><span>Microwave measurement &amp; uncertainty</span><span>Software-defined radio</span><span>Computational electromagnetics</span><span>Electromagnetic inverse problems</span></div>
+    <div class="approach-grid" aria-label="Research approach">
+      <div><strong>Physically interpretable</strong><span>Results grounded in electromagnetic theory.</span></div>
+      <div><strong>Measurement-aware</strong><span>Fabrication, calibration, noise and uncertainty are explicit.</span></div>
+      <div><strong>Experimentally feasible</strong><span>Methods designed around practical, accessible RF hardware.</span></div>
+      <div><strong>Reproducible</strong><span>Defined datasets, benchmarks and computational workflows.</span></div>
+      <div><strong>Application-oriented</strong><span>Sensing, communications, materials and infrastructure monitoring.</span></div>
+    </div>
+  </div>
 </div></section>
 
 <section class="section dark" id="research"><div class="container">
@@ -295,13 +356,13 @@ a{color:inherit} img{max-width:100%} button{font:inherit}
 
 <section class="section" id="contact"><div class="container contact-grid">
   <div class="contact-copy"><p class="eyebrow">Contact &amp; collaboration</p><h2>Research collaboration, student projects, and laboratory support.</h2><p>The laboratory welcomes research collaborations that connect electromagnetic modelling, sensing, RF hardware, materials, measurement, and intelligent signal processing.</p><div class="contact-points"><div>Joint research &amp; publications</div><div>Materials / fabrication collaboration</div><div>Measurement &amp; benchmarking</div><div>Student research projects</div></div><a class="btn blue" href="mailto:ekremaltinozen@harran.edu.tr?subject=Applied%20Electromagnetics%20Lab%20collaboration">Start a conversation →</a></div>
-  <aside class="contact-card"><h3>Dr. Ekrem Altınözen</h3><p><strong>Lab Lead &amp; Principal Investigator</strong><br>Assistant Professor · Electrical &amp; Electronics Engineering · Harran University</p><a class="contact-item" href="mailto:ekremaltinozen@harran.edu.tr"><small>Email</small><span>ekremaltinozen@harran.edu.tr</span></a><a class="contact-item" href="tel:+904143183000"><small>Office</small><span>+90 414 318 3000 · Ext. 1415</span></a><div class="contact-item"><small>Location</small><span>Faculty of Engineering, F Block, 3rd Floor · Osmanbey Campus · Şanlıurfa, Türkiye</span></div><a class="contact-item" href="https://www.harran.edu.tr/personel/ekremaltinozen%40harran.edu.tr" target="_blank" rel="noopener"><small>University profile</small><span>Harran University ↗</span></a></aside>
+  <aside class="contact-card"><h3>Dr. Ekrem Altınözen</h3><p><strong>Assistant Professor · Lab Lead &amp; Principal Investigator</strong><br>Vice Chair · Electrical &amp; Electronics Engineering · Harran University</p><a class="contact-item" href="mailto:ekremaltinozen@harran.edu.tr"><small>Email</small><span>ekremaltinozen@harran.edu.tr</span></a><a class="contact-item" href="tel:+904143183000"><small>Office</small><span>+90 414 318 3000 · Ext. 1415</span></a><div class="contact-item"><small>Location</small><span>Faculty of Engineering, F Block, 3rd Floor · Osmanbey Campus · Şanlıurfa, Türkiye</span></div><a class="contact-item" href="https://www.harran.edu.tr/personel/ekremaltinozen%40harran.edu.tr" target="_blank" rel="noopener"><small>University profile</small><span>Harran University ↗</span></a></aside>
 </div></section>
 
 
 </main>
 
-<footer class="footer"><div class="container footer-main"><div class="footer-brand"><img src="assets/logo.webp" width="54" height="56" loading="lazy" decoding="async" alt=""><div><strong>Applied Electromagnetics Lab</strong><small>Harran University · Şanlıurfa, Türkiye</small></div></div><nav class="footer-links"><a href="#vision">Vision</a><a href="#research">Research</a><a href="#outputs">Research Outputs</a><a href="#directions">Directions</a><a href="#students">Student Research</a><a href="#support">Acknowledgements</a></nav></div><div class="container footer-bottom"><span>© <span data-year></span> Harran University Applied Electromagnetics Lab</span><span>Research led by Dr. Ekrem Altınözen</span></div></footer>
+<footer class="footer"><div class="container footer-main"><div class="footer-brand"><img src="assets/logo.webp" width="54" height="56" loading="lazy" decoding="async" alt=""><div><strong>Applied Electromagnetics Lab</strong><small>Harran University · Şanlıurfa, Türkiye</small></div></div><nav class="footer-links"><a href="#vision">Vision</a><a href="#biography">Biography</a><a href="#research">Research</a><a href="#outputs">Research Outputs</a><a href="#directions">Directions</a><a href="#students">Student Research</a><a href="#support">Acknowledgements</a></nav></div><div class="container footer-bottom"><span>© <span data-year></span> Harran University Applied Electromagnetics Lab</span><span>Research led by Dr. Ekrem Altınözen</span></div></footer>
 
 <div class="modal" data-modal hidden role="dialog" aria-modal="true" aria-label="Lab vision infographic"><div class="modal-box" tabindex="-1"><button class="modal-close" data-close-vision aria-label="Close infographic">×</button><img src="assets/vision.webp" width="1254" height="1246" loading="lazy" decoding="async" alt="Lab vision infographic, enlarged view"></div></div>
 
@@ -337,7 +398,20 @@ a{color:inherit} img{max-width:100%} button{font:inherit}
     "name": "Ekrem Altınözen",
     "givenName": "Ekrem",
     "familyName": "Altınözen",
-    "jobTitle": "Lab Lead & Principal Investigator",
+    "jobTitle": ["Assistant Professor", "Lab Lead & Principal Investigator", "Vice Chair"],
+    "honorificPrefix": "Dr.",
+    "alternateName": "Ekrem Altinozen",
+    "description": "Applied electromagnetics researcher working in computational electromagnetics, RF and microwave sensing, antennas, resonant sensors, material characterization and physics-guided signal interpretation.",
+    "alumniOf": [
+      {"@type":"CollegeOrUniversity","name":"University of Nottingham"},
+      {"@type":"CollegeOrUniversity","name":"Eskişehir Osmangazi University"}
+    ],
+    "memberOf": [
+      {"@type":"Organization","name":"IEEE"},
+      {"@type":"Organization","name":"IEEE Antennas and Propagation Society"},
+      {"@type":"Organization","name":"IEEE Microwave Theory and Technology Society"},
+      {"@type":"Organization","name":"COST Action CA23015 TETRA"}
+    ],
     "email": "ekremaltinozen@harran.edu.tr",
     "affiliation": { "@type": "CollegeOrUniversity", "name": "Harran University" },
     "identifier": "https://orcid.org/0000-0003-3671-6732",
